@@ -47,10 +47,10 @@
 		"build": ":",
 		"clean": ":",
 		"exec": "$@",
-		"prepublishOnly": "pnpm clean && pnpm build && pnpm test",
-		"test": "pnpm test:unit ###enable when https://github.com/vanjs-org/mini-van/issues/9 is fixed### && check-dts",
+		"prepublishOnly": "bun run clean && bun run build && bun run test && publint && attw --pack --ignore-rules cjs-resolves-to-esm",
+		"test": "bun run test:unit ###enable when https://github.com/vanjs-org/mini-van/issues/9 is fixed### && check-dts",
 		"test:unit": "tsx node_modules/uvu/bin.js . '\\.test\\.(ts|js)$'",
-		"disable:test:unit:coverage": "c8 pnpm test:unit"
+		"disable:test:unit:coverage": "c8 bun run test:unit"
 	},
 	"dependencies": {
 		"@ctx-core/dom": "*",
