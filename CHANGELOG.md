@@ -1,5 +1,15 @@
 # @ctx-core/vanjs
 
+## 5.0.45
+
+### Patch Changes
+
+- chore: migrate scripts from pnpm to bun
+- Updated dependencies
+  - ctx-core@7.2.34
+  - @ctx-core/dom@15.3.104
+  - van-type-delegate@1.3.11
+
 ## 5.0.44
 
 ### Patch Changes
